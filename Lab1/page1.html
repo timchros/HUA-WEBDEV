@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 4 - Testing</title>
+    <style>
+        
+        label {
+            display: inline-block;
+            min-width: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+        }
+
+        input {
+            padding: 5px 10px;
+            min-width: 100px;
+        }
+        
+        input[type=submit] {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <h2>An HTML Form for Testing purposes...</h2>
+        <form action="testprogram" method="POST">
+            <input type="text" name="param1" pattern="[abc]{5}" placeholder="#####" title="It should have 5 a/b/c characters..." required>
+            <input type="date" name="param2" required>
+            <input type="submit" value="press-me">
+            <input type="reset">
+        </form>
+    </div>
+    
+    <div>
+        <h2>Update Password</h2>
+        <p>A Form that enable Users to change their password...</p>
+        <form action="unpdatepassword" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required><br>
+            <label for="oldpass">Type OLD Password:</label>
+            <input type="password" name="oldpass" id="oldpass" required><br>
+            <label for="newpass1">Type NEW Password:</label>
+            <input type="password" name="newpass1" id="newpass1" required>
+            <label for="newpass2">Type <strong>again</strong> NEW Password:</label>
+            <input type="password" name="newpass2" id="newpass2" required><br><br>
+            <input type="submit" value="Change !">
+            <input type="reset" value="Clear">
+        </form>
+    </div>
+
+    <script>
+        let b = document.querySelector("input[type=submit]");
+        b.addEventListener("click", function(e){
+            console.log("test message");
+            // Find Elements for new password
+            let pass1 = document.querySelector("#newpass1");
+            let pass2 = document.querySelector("#newpass2");
+            // Compare their values
+            if (pass1.value === pass2.value) {
+                const info_msg = "The input fields have the SAME new password ... Send HTTP request with data to server.";
+                console.log(info_msg);
+                alert(info_msg);
+            } else {
+                const error_msg = "The new password is DIFFERENT in the last two input field ! Remain in this page !!"
+                console.log(error_msg);
+                alert(error_msg);
+                // Do not sent the HTTP request yet !
+                e.preventDefault();
+            }
+        });
+
+    </script>
+
+</body>
+</html>

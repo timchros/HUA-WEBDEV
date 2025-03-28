@@ -1,0 +1,114 @@
+
+/* CSS Rules */
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*
+body {
+    margin: 0px;
+}
+*/
+
+h1, h3 {
+    margin: 0px;
+}
+
+h1 {
+    margin: 0px 0px 40px 0px;
+}
+
+#logoimg {
+    position: relative;
+    top: 20px;
+    left: 10px;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.ximg {
+    position: relative;
+    top: 4px;
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.ximg:hover {
+    background-color: lightgoldenrodyellow;
+    cursor: pointer;
+}
+
+div { 
+    border-radius: 25px;
+}
+
+#indiv {
+    background-color: lightgray;
+    padding: 10px 50px;
+}
+
+#outdiv {
+    margin-top: 20px;
+    background-color: lightblue;
+    padding: 10px 50px;
+    height: 220px;
+    overflow: auto;
+}
+
+#hiddendiv {
+    margin-top: 10px;
+    border-top: 1px dashed gray;
+    padding-top: 10px;
+}
+
+select {
+    width: 200px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+input[type="button"] {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+input[type="button"]:hover {
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    margin-left: 50px;
+    padding: 5px 10px;
+    border: 3px solid darkred;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: lightcoral;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+li {
+    padding: 10px;
+}
+
+#popup {    
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    background-color: darkslategray;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    padding: 10px;
+}
