@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1 - Testing JS</title>
+    <!-- CSS -->
+    <link href="webapp.css" rel="stylesheet">
+    <!-- JavaScript -->
+    <script src="webapp.js"></script>
+</head>
+<body>
+
+
+    <div id="maindiv">
+        <h1><img src="imgs/hua-dig.png" id="logoimg"> Testing HTML - CSS - JavaScript</h1>
+
+        <div id="indiv">
+            <!-- Input Area -->
+            <p> We can add new elements (from those selected) in the List using the Button...</p>
+            <select id="selectid">
+                <option value=""></option>
+                <option value="a">AAA</option>
+                <option value="b">BBB</option>
+                <option value="c">CCC</option>
+            </select>
+            <input type="button" value="Add LI element !" id="addbutton" mymy="My Button">
+        </div>
+        <div id="outdiv">
+            <!-- Output Area-->
+            <h3>Selected Elements: </h3>
+            <p> We can remove new elements using the cross image...</p>
+            <ul id="mylist">
+            <!--
+                <li>Test 1</li>
+                <li>Test 2</li>
+                <li>Test 3</li>
+            -->
+            </ul>
+            
+        </div>
+
+        <div id="hiddendiv" mymy="Hidden Area !!!">
+            <!-- Hidden Data -->
+             ... 
+             <form action="ServerProgram" method="POST">
+                <input type="hidden" name="hiddendata" id="hiddendata" value="[]">
+                <input type="button" id="hiddendatabutton" value="Show hidden data !">
+                <input type="submit" value="Send Data to Server">
+            </form>
+        </div>
+    </div>
+
+    <div id="popup">My Pop Up</div>
+
+</body>
+</html>
