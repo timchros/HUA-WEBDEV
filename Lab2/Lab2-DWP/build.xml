@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<project name="Lab2-DWP" default="archive" basedir=".">
+
+	<property name="src.dir" 			value="./src/main/java"/>
+	<property name="web.content.dir" 	value="./src/main/webapp"/>
+	<property name="tomcat.lib.dir" 	value="./tomcat-lib" />
+	<property name="tmp.dir" 			value="./tmp"/>
+	<property name="war.name" 			value="Lab2-DWP.war"/>
+	
+	<property name="user.full.name" 	value="Efthymios Chondrogiannis"/>
+	<property name="version.label" 		value="Version 1.0"/>
+	
+	<path id="java.classpath">
+		<fileset dir="${web.content.dir}/WEB-INF/lib"> <include name="*.jar"/> </fileset>
+		<fileset dir="${tomcat.lib.dir}"> <include name="*.jar"/> </fileset>
+	</path>	
+	
+	<target name="clean" description="Clean generated files">
+        <delete dir="${tmp.dir}"/>
+    </target>
+
+	<target name="copy" depends="clean" description="Copy Web Project Files">
+		<mkdir dir="${tmp.dir}"/>
+		<copy todir="${tmp.dir}">  
+			<fileset dir="${web.content.dir}">  
+				<exclude name="**/.idea/*"/>
+				<include name="**/*"/>  
+			</fileset>  
+		</copy>
+		<mkdir dir="${tmp.dir}/WEB-INF/classes"/>
+    </target>	
+
+    <target name="build" depends="copy" description="Compile Java Source Files">
+	    <javac encoding="UTF-8" destdir="${tmp.dir}/WEB-INF/classes" source="21" target="21" debug="on" deprecation="on" includeAntRuntime="yes" >
+			<classpath>
+				<path refid="java.classpath"/>
+			</classpath>
+			<src path="${src.dir}"/>
+		</javac>
+    </target>
+
+    <target name="archive" depends="build" description="Package all files in a WAR file">
+		<delete file="./${war.name}"/>
+		<war destfile="./${war.name}" webxml="${tmp.dir}/WEB-INF/web.xml">
+			<fileset dir="${tmp.dir}"/>
+            <manifest>
+                <section name="built-info">
+                    <attribute name="Built-By" value="${user.full.name}"/>
+                </section>
+                <section name="version-info">
+                    <attribute name="Version-Label" value="${version.label}"/>
+                </section>
+            </manifest>
+		</war>
+    </target>
+	
+</project>
