@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Page</title>
+        <!-- FILE with CSS RULES -->
+        <link href="css/page.css" rel="stylesheet">
+    </head>
+    <body>
+        <img src="imgs/hua-dit.png"> 
+        
+        <h1>Login Page</h1>
+        
+        <p>Provide both <strong>username</strong> and <strong>password</strong> 
+            and accordingly press <strong>Login</strong> Button</p>
+
+		<form action=MainPageServlet method="POST" autocomplete="off">
+			<label for="username">Username:</label>
+			<input type="text" name="username" id="username" required>
+			<br>
+			<label for="password">Password:</label>
+			<input type="password" name="password" id="password" autocomplete="off" required>
+			<br>
+			<input type="reset" value="Reset">
+			<input type="submit" value="Login">
+		</form>
+
+        <!-- Area for JavaScript Testing purposes -->
+        <div id="mydiv">Comments Area</div>
+
+		<p> Try it: 
+			<a href="ViewUsers.jsp">View ALL Users !</a>
+		</p>
+		
+		<br><br>
+		<p>Click the following link ... so that the H2 DB is being created (on server) with a few records. 
+			In case of H2 DB (based on the approach being followed)  ... this is <b>mandatory</b> !
+		</p>
+		<a href="TestDbServlet">Test DB ... </a>
+		
+        <!-- FILE with JavaScript CODE -->
+        <script src="js/page.js"></script>
+
+    </body>
+</html>
+
+
+
