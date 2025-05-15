@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Lab 4 - Home Page</title>
+		<!-- FILE with CSS RULES -->
+        <link href="page.css" rel="stylesheet">
+	</head>
+	<body>
+	    <img id="logo-img" src="imgs/hua-dit.png">         
+        <h1>Lab 4 - Home Page</h1>
+       	
+       	<p>This page consists of two areas that are being updated independently !</p>
+       
+        <div class="area">
+	      	<h2>New User Registration Area</h2>
+	   		<form id="form-id">
+				<label for="username">Username:</label>
+				<input type="text" name="username" id="username" required>
+				<br>
+				<label for="password">Password:</label>
+				<input type="password" name="password" id="password" autocomplete="off" required>
+				<br>
+				<input type="reset" value="Reset">
+				<input type="button" id="register-button" value="Register">
+			</form>
+			<div id="output-div-1" class="output-area">
+				New User Registration Messages are placed here, on button click !
+			</div>
+		</div>
+		
+        <div class="area">
+	      	<h2>View ALL Users Area</h2>
+	   		<input type="button" id="view-button" value="View ALL">
+			<div id="output-div-2" class="output-area">
+				All users are placed here, on button click !
+			</div>
+		</div>
+        
+		<br>
+		<p>In case of H2 DB, pressing the following link is necessary (at least once).</p>
+		<a href="InitializeH2DbServlet">Reset H2 DB ... </a>
+		
+		<!-- FILE with JavaScript CODE -->
+        <script src="page.js"></script>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    color: darkblue;
+}
+
+#logo-img {
+	float: right;
+}
+
+form {
+    padding: 10px 20px;
+    border: 1px dashed gray;
+    border-radius: 20px;
+    max-width: 500px;
+    background-color: aliceblue;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    margin: 5px 10px;
+}
+
+input {
+    margin: 5px 10px;
+    padding: 5px;
+}
+
+input[type=reset] , input[type=submit] {
+    width: 150px;
+}
+
+#mydiv{
+    margin-top: 20px;
+    margin-left: 10px;
+    color: gray;
+}
+
+.area {
+	border: 1px dashed green;
+    margin-top: 5px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.output-area {
+	padding: 10px;
+}
+
+.redtext {
+	color: red;
+}
+
+.greentext {
+	color: green;
+}
+
+.users-table td {
+	margin: 5px;
+	padding: 5px;
+	background-color: lime;
+}
